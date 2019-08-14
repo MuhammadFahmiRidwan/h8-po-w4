@@ -1,8 +1,21 @@
 // Diberikan sebuah function angkaPrima(angka) yang menerima satu parameter berupa angka. Function akan me-return true jika angka tersebut adalah bilangan prima. Jika tidak, return false.
 function angkaPrima(angka) {
     // you can only write your code here!
-    
-}
+    var prime = true
+
+    for (var i = 2; i < angka; i++) {
+      if (angka % i == 0){
+        return false
+      }
+    }
+      if (prime === false) {
+        return false
+      }
+      else {
+        return true
+      }
+    }
+
 
   // TEST CASES
   console.log(angkaPrima(3)); // true
