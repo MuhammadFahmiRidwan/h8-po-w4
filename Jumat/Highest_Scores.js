@@ -9,6 +9,19 @@
 // }
 function highestScore (students) {
     // Code disini
+    var obj = {}
+    for ( var i = 0; i < students.length; i ++) {
+      if (!obj[students[i].class]) {
+        obj[students[i].class] = {
+          name : students[i].name,
+          score : students[i].score
+        }
+      }
+      else {
+        console.log({})
+      }
+    }
+    return obj
   }
   
   // TEST CASE

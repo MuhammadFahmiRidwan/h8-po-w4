@@ -6,6 +6,20 @@
 // John Doe: { firstName: 'John', lastName: 'Doe', gender: 'male', age: 18 }
 function changeMe(arr) {
     // you can only write your code here!
+    var obj = {}
+    for (var i = 0; i < arr.length; i++) {
+      console.log(i+1, arr[i][0] + " " + arr[i][1] + ":")
+      obj["firstName"] = arr[i][0],
+      obj["lastName"] = arr[i][1],
+      obj["gender"] = arr[i][2]
+      if (arr[i][3] == undefined) {
+        obj["age"] =  "invalid Birth Year"
+      }
+      else {
+        obj["age"] = 2019 - arr[i][3]
+      }
+      console.log(obj)
+    } 
   }
   
   // TEST CASES

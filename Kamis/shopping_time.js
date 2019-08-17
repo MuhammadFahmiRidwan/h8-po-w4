@@ -19,7 +19,33 @@
 // { memberId: '324193hDew2', money: 700000, listPurchased: [ 'Baju Zoro', 'Sweater Uniklooh' ], changeMoney: 25000 }
 function shoppingTime(memberId, money) {
     // you can only write your code here!
+    var namabarang = [["Sepatu Stacattu", 1500000], ["Baju Zoro", 500000], ["Baju H&N", 250000], ["Sweater Uniklooh", 175000], ["Casing Handphone", 50000]]
+    var obj = {}
+    var list = []
+    var uangbarang = 0
+
+    for (var i = 0; i < namabarang.length; i++) {
+      if (memberId === undefined || memberId === "") {
+        return "Mohon maaf, toko X hanya berlaku untuk member saja"
+      }
+      else if (money < 50000) {
+        return "Mohon maaf, uang tidak cukup"
+      }
+      else if (money >= namabarang[i][1]){
+        list.push(namabarang[i][0])
+        uangbarang += namabarang[i][1]
+      }
+    }
+    obj.memberId = memberId
+    obj["money"] = money
+    obj.listPurchased = list
+    obj["changeMoney"] = money - uangbarang
+
+    return obj
   }
+
+
+
   
   // TEST CASES
   console.log(shoppingTime('1820RzKrnWn08', 2475000));

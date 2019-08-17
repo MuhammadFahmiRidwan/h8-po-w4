@@ -18,6 +18,22 @@
 // Level kedalaman array akan di-asumsikan selalu 3, [ [ [ ] ] ], jika yang diberikan adalah array kosong maka kembalikan nilai 'No number'
 function deepSum (arr) {
     // Code disini
+    var jumlah = 0
+    
+    for (var i = 0; i < arr.length; i++) {
+      for (var j = 0; j < arr[i].length; j++){
+        for (var k = 0; k < arr[i][j].length; k++){
+          // console.log(arr[i][j][k])
+          jumlah += arr[i][j][k]
+        }      
+      }
+    }
+    if (arr.length > 0) {
+    return jumlah
+    }
+    else {
+      return "No Number"
+    }
   }
   
   //TEST CASE
