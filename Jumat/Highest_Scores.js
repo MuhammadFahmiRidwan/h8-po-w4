@@ -16,6 +16,12 @@ function highestScore (students) {
           name : students[i].name,
           score : students[i].score
         }
+      if (obj[students[i].class].score < students[i].score) {
+        obj[students[i].class] = {
+          name : students[i].name,
+          score : students[i].score
+        }
+      }
       }
       else {
         console.log({})
