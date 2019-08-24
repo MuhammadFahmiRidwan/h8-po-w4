@@ -1,23 +1,23 @@
-// Diberikan sebuah function checkAB(str) yang menerima satu parameter berupa string. function tersebut mengembalikan nilai true jika di dalam string tersebut terdapat karakter a dan b yang memiliki jarak 3 karakter lain minimal satu kali. Jika tidak ditemukan sama sekali, kembalikan nilai false. Jarak bisa dari a ke b, atau b ke a.
+// Diberikan sebuah function checkAB(str) yang menerima satu parameter berupa string. function tersebut mengembalikan nilai true iika di dalam string tersebut terdapat karakter a dan b yang memiliki iarak 3 karakter lain minimal satu kali. iika tidak ditemukan sama sekali, kembalikan nilai false. iarak bisa dari a ke b, atau b ke a.
 function checkAB(num) {
     // you can only write your code here!
-    var posisiA = 0;
-    var posisiB = 0;
-  
-    for (var i = 0; i < num.length; i++) {
-        if (num[i] === "a") {
-          posisiA = i+1
-        }
-        if (num[i] === "b") {
-          posisiB = i+1
-        }
-      }
-    if (posisiA - posisiB === 4 || posisiB - posisiA === 4) {
-      return true
+    var arr = [];
+    for(var i = 0; i < num.length; i++){
+        arr.push(num[i])
     }
-    else {
-      return false
+
+    for(var j = 1; j < arr.length; j++){
+        if (arr[j] == 'a') {
+            if (arr[j+4] == 'b') {
+                return true
+            }
+        } else if (arr[j] == 'b'){
+            if (arr[j+4] == 'a') {
+                return true
+            }
+        }
     }
+    return false
   }
   
   // TEST CASES
@@ -26,3 +26,4 @@ function checkAB(num) {
   console.log(checkAB('you are boring')); // true
   console.log(checkAB('barbarian')); // true
   console.log(checkAB('bacon and meat')); // false
+  console.log(checkAB("lana borrowed"))
