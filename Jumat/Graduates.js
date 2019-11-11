@@ -6,63 +6,9 @@
 // Student yang tidak lulus tidak perlu ditampilkan.
 // Output yang diharapkan berupa Object Literal dengan format sebagai berikut:
 
-// function graduates (key) {
-//   var obj = {}
- 
-//   for (var i = 0; i < key.length; i++) {
-//     // console.log(key[i].class)
-//     if (!obj[key[i].class]) {
-//       obj[key[i].class] = []
-//     obj[key[i].class].push(key[i].name)
-//     }
-//   }
-//   return obj 
-// }
-// for (var i = 0; i < students.length; i++) {
-//   // console.log(key[i].class)
-//   if (!obj[students[i].class]) {
-//     obj[students[i].class] = []
-//     obj[students[i].class].push ({
-//       name : students[i].name,
-//       score : students[i].score
-//     }) 
-    
-//   }
-//   else {
-//   }
-// }
-// return obj 
-// }
-
 
 function graduates (students) {
     // Code disini
-    var obj = {}
- 
-  for (var i = 0; i < students.length; i++) {
-    // console.log(key[i].class)
-    if (!obj[students[i].class]) {
-      obj[students[i].class] = []
-      if (students[i].score >= 75 ) {
-        var hasil = {
-        name : students[i].name,
-        score : students[i].score
-        }
-        obj[students[i].class].push(hasil)
-      }
-    }
-    else if (students[i].score >= 75) {
-          var objek = {
-            name : students[i].name,
-            score : students[i].score
-          }
-        obj[students[i].class].push(objek)
-        }
-        else {
-          console.log ({})
-        }
-  }
-  return obj 
 }
   
   console.log(graduates([
