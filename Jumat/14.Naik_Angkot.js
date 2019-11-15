@@ -3,6 +3,7 @@
 // Diberikan sebuah rute, dari A - F. Penumpang diwajibkan membayar Rp2000 setiap melewati satu rute.
 
 // Contoh: input: [['Dimitri', 'B', 'F']] output: [{ penumpang: 'Dimitri', naikDari: 'B', tujuan: 'F', bayar: 8000 }]
+
 function naikAngkot(arrPenumpang) {
 }
   //TEST CASE

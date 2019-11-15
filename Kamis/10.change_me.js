@@ -4,6 +4,7 @@
 
 // Platinum Fox: { firstName: 'Platinum', lastName: 'Fox', gender: 'female', age: 23 }
 // John Doe: { firstName: 'John', lastName: 'Doe', gender: 'male', age: 18 }
+
 function changeMe(arr) {
     // you can only write your code here!
   }

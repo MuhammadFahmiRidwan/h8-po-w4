@@ -7,6 +7,7 @@
 //   <class>: { name: <name>, score: <score> },
 //   <class>: { name: <name>, score: <score> }
 // }
+
 function highestScore (students) {
     // Code disini
   }

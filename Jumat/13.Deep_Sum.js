@@ -16,6 +16,7 @@
 // Maka akan menghasilkan output: 22
 
 // Level kedalaman array akan di-asumsikan selalu 3, [ [ [ ] ] ], jika yang diberikan adalah array kosong maka kembalikan nilai 'No number'
+
 function deepSum (arr) {
     // Code disini
   }
