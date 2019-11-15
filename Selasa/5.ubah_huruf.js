@@ -3,12 +3,16 @@
 function ubahHuruf(kata) {
     // you can only write your code here!
     let abjad = 'abcdefghijklmnopqrstuvwxyz'
-    let arr = abjad.split('')
+    let arr = []
     let result = ''
+
+    for (let i = 0; i < abjad.length; i++) {
+      arr.push(abjad[i])
+    }
 
     for (let i = 0; i < kata.length; i++) {
       for (let j = 0; j < arr.length; j++) {
-        console.log(kata[i] + ' ' + arr[j])
+        // console.log(kata[i] + ' ' + arr[j])
         if (kata[i] == arr[j]) {
           result += arr[j+1]
         }
