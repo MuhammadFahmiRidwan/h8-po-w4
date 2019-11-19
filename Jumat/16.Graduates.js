@@ -9,6 +9,20 @@
 
 function graduates (students) {
     // Code disini
+    let obj = {}
+    for (let i = 0; i < students.length; i++) {
+      if (!obj[students[i].class]) {
+      obj[students[i].class] = []
+      }
+      if (students[i].score > 75) {
+        let temp = {
+          name : students[i].name,
+          score : students[i].score
+        }
+        obj[students[i].class].push(temp)
+      }
+    }
+    return obj
 }
   
   console.log(graduates([

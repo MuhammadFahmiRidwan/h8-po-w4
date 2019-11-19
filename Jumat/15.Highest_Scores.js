@@ -10,6 +10,24 @@
 
 function highestScore (students) {
     // Code disini
+    let obj = {}
+    for (let i = 0; i < students.length; i++) {
+      // console.log(obj[students[i].class])
+      if (!obj[students[i].class]) {
+          obj[students[i].class] = {
+            name : students[i].name,
+            score : students[i].score
+          }
+      }
+      // console.log(obj[students[i].class].score + ' ' + students[i].score)
+      if (obj[students[i].class].score < students[i].score) {
+          obj[students[i].class] = {
+            name : students[i].name,
+            score : students[i].score
+          }
+      }
+    }
+    return obj
   }
   
   // TEST CASE

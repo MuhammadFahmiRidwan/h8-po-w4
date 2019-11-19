@@ -18,8 +18,44 @@
 
 // { memberId: '324193hDew2', money: 700000, listPurchased: [ 'Baju Zoro', 'Sweater Uniklooh' ], changeMoney: 25000 }
 
+
 function shoppingTime(memberId, money) {
-    // you can only write your code here!
+  let goods = [
+    ['Sepatu Stacatu', 1500000],
+    ['Baju brand Zoro', 500000],
+    ['Baju brand H&N', 250000],
+    ['Sweater brand Uniklooh', 175000],
+    ['Casing Handphone', 50000]
+  ]
+
+  let obj = {}
+  let calculate = 0
+  let list = []
+  let temp = Infinity
+  
+  for (let i = 0; i < goods.length; i++) {
+    if (temp > goods[i][1]) {
+      temp = goods[i][1]
+    }
+  }
+  for (let i = 0; i < goods.length; i++) {
+    if (!memberId) {
+      return 'Mohon maaf, toko X hanya berlaku untuk member saja'
+    }
+    else if (money < temp) {
+      return 'Mohon maaf, uang tidak cukup'
+    }
+    else if (money >= goods[i][1]) {
+      list.push(goods[i][0])
+      calculate += goods[i][1]
+    }
+  }
+
+  obj.memberId = memberId
+  obj.money = money
+  obj.listPurchased = list
+  obj.changeMoney = money - calculate
+  return obj
   }
 
 

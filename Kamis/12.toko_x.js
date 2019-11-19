@@ -11,6 +11,36 @@
 
 function countProfit(shoppers) {
 
+    if (shoppers == '') {
+      return []
+    }
+    let goods = [
+      ['Sepatu Stacattu', 1500000, 10],
+      ['Baju Zoro', 500000, 2],
+      ['Sweater Uniklooh', 175000, 1]
+    ]
+
+    let arr = []
+    
+    for (let i = 0; i < goods.length; i++) {
+      let buyer = []
+      let obj = {}
+      let buy = 0
+      for (let j = 0; j < shoppers.length; j++) {
+        console.log(goods[i][2] + ' ' + (buy + shoppers[j].amount))
+        if (goods[i][0] === shoppers[j].product && buy + shoppers[j].amount <= goods[i][2]) {
+          buyer.push(shoppers[j].name)
+          buy += shoppers[j].amount
+        }
+        // console.log(buy + shoppers[j].amount + ' ' + goods[i][2])
+      }
+      obj.product = goods[i][0]
+      obj.shoppers = buyer
+      obj.leftOver = goods[i][2] - buy
+      obj.totalProfit = buy * goods[i][1]
+      arr.push(obj)
+    }
+    return arr
   }
   
   // TEST CASES
@@ -28,7 +58,7 @@ function countProfit(shoppers) {
   //   leftOver: 1,
   //   totalProfit: 0 } ]
   
-  console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 8}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 1}, {name: 'Devi', product: 'Baju Zoro', amount: 1}, {name: 'Lisa', product: 'Baju Zoro', amount: 1}]));
+  // console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 8}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 10}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 1}, {name: 'Devi', product: 'Baju Zoro', amount: 1}, {name: 'Lisa', product: 'Baju Zoro', amount: 1}]));
   // [ { product: 'Sepatu Stacattu',
   //     shoppers: [ 'Windi' ],
   //     leftOver: 2,
@@ -41,7 +71,7 @@ function countProfit(shoppers) {
   //     shoppers: [ 'Rani' ],
   //     leftOver: 0,
   //     totalProfit: 175000 } ]
-  console.log(countProfit([{name: 'Windi', product: 'Sepatu Naiki', amount: 5}]));
+  // console.log(countProfit([{name: 'Windi', product: 'Sepatu Naiki', amount: 5}]));
   // [ { product: 'Sepatu Stacattu',
   //     shoppers: [],
   //     leftOver: 10,

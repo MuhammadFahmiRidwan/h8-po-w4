@@ -19,6 +19,19 @@
 
 function deepSum (arr) {
     // Code disini
+    if (arr == '') {
+      return 'No number'
+    }
+    let result = 0
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        for (let k = 0; k < arr[i][j].length; k++) {
+          // console.log(arr[i][j][k])
+          result += arr[i][j][k]
+        }
+      }
+    }
+    return result
   }
   
   //TEST CASE

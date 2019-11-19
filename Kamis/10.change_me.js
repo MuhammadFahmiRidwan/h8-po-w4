@@ -7,6 +7,23 @@
 
 function changeMe(arr) {
     // you can only write your code here!
+    for (let i = 0; i < arr.length; i++) {
+
+      function cekArrKe3 () {
+        if(arr[i][3]) {
+          return arr[i][3]
+        } else {
+          return "invalid Birth Year"
+        }
+      }
+      console.log(i+1 + '. ' +  arr[i][0] + arr[i][1])
+      console.log({
+        firstName : arr[i][0],
+        lastName : arr[i][1],
+        gender : arr[i][2],
+        age: cekArrKe3()
+      })
+    }
   }
   
   // TEST CASES
