@@ -26,7 +26,7 @@ function cariModus(arr) {
     }
   }
 
-  // console.log(newArr)
+  console.log(newArr)
  
   let result = 0
   let temp = Infinity
@@ -39,25 +39,25 @@ function cariModus(arr) {
       }
     }
   }
-  return temp
+  
 
-  // if(temp === Infinity) {
-  //   return -1
-  // } else if (temp !== Infinity) {
-  //   return temp
-  // }
+  if(temp === Infinity) {
+    return -1
+  } else if (temp !== Infinity) {
+    return temp
+  }
 
-  // if (result == 0 || newArr.length === 1) {
-  //   return -1
-  // }
+  if (result == 0 || newArr.length === 1) {
+    return -1
+  }
 
-  // if (temp.length > 0) {
-  //   for (let i = 0; i < temp.length; i++) {
-  //     if (temp[i] < temp[i+1]) {
-  //       result = temp[i]
-  //     }
-  //   } 
-  // }
+  if (temp.length > 0) {
+    for (let i = 0; i < temp.length; i++) {
+      if (temp[i] < temp[i+1]) {
+        result = temp[i]
+      }
+    } 
+  }
 }
   
   

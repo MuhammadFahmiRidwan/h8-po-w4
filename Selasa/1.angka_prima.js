@@ -2,20 +2,22 @@
 
 function angkaPrima(angka) {
     // you can only write your code here!
-    let prime = true
 
-    for (let i = 2; i < angka; i++) {
+    let counter = 0
+
+    for (i = 0; i <= angka; i++) {
       if (angka % i === 0) {
-        return false
+        counter++
       }
     }
-    if (prime = false)  {
+    if (counter > 2) {
       return false
     }
     else {
       return true
     }
   }
+
 
 
   // TEST CASES
