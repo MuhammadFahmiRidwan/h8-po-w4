@@ -50,14 +50,6 @@ function cariModus(arr) {
   if (result == 0 || newArr.length === 1) {
     return -1
   }
-
-  if (temp.length > 0) {
-    for (let i = 0; i < temp.length; i++) {
-      if (temp[i] < temp[i+1]) {
-        result = temp[i]
-      }
-    } 
-  }
 }
   
   
