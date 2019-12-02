@@ -45,51 +45,52 @@ function pair(str) {
     }
   }
   
-  // let temp = ''
-  // for (let i = 0; i < arr.length; i++) {
-  //   if (i % 2 == 0) {
-  //     temp += arr[i] + ' dan '
-  //   }
-  //   else {
-  //     temp += arr[i]
-  //   }
-  // }
-  // return temp
-  // let count = 0
-  if (arr.length % 2 == 0) {
-
-  
   let result = []
-  console.log(arr.length)
-  let count = 0
-  for (let i = 0; i < arr.length; i++) {
-    count++
-    console.log(count)
-    if (arr.length % 2 == 0 && count % 2 != 0) {
-      result.push(arr[i][0] + ' dan ')
+
+  for (let i = 0; i < arr.length; i+= 2) {
+    // console.log(arr[i+1])
+    if (arr[i + 1]) {
+      result.push(arr[i] + ' dan ' + arr[i+1]) 
     }
     else {
-      result.push(arr[i][0])
+      result.push(arr[i] + ' sendirian')
     }
   }
   return result
-  }
+  // if (arr.length % 2 == 0) {
 
-  else {
-    let result1 = []
-    let count = 0
-    for (let i = 0; i < arr.length; i++) {
-      count++
-      console.log(count)
-      if (arr.length % 2 != 0 && count % 2 != 0) {
-        result1.push(arr[i][0] + ' dan ')
-      }
-      else {
-        result1.push(arr[i][0])
-      }
-    }
-    return result1
-  }
+  
+  // let result = []
+  // console.log(arr.length)
+  // let count = 0
+  // for (let i = 0; i < arr.length; i++) {
+  //   count++
+  //   console.log(count)
+  //   if (arr.length % 2 == 0 && count % 2 != 0) {
+  //     result.push(arr[i][0] + ' dan ')
+  //   }
+  //   else {
+  //     result.push(arr[i][0])
+  //   }
+  // }
+  // return result
+  // }
+
+  // else {
+  //   let result1 = []
+  //   let count = 0
+  //   for (let i = 0; i < arr.length; i++) {
+  //     count++
+  //     console.log(count)
+  //     if (arr.length % 2 != 0 && count % 2 != 0) {
+  //       result1.push(arr[i][0] + ' dan ')
+  //     }
+  //     else {
+  //       result1.push(arr[i][0])
+  //     }
+  //   }
+  //   return result1
+  // }
 
 }
 
